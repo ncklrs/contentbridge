@@ -7,13 +7,11 @@
 
 import type {
   DocumentSchema,
-  FieldSchema
-} from '@contentbridge/core/types'
-import type {
+  FieldSchema,
   BaseAdapter,
   GeneratedTypes,
   TypeGenerationOptions
-} from '@contentbridge/core/adapters'
+} from '@contentbridge/core'
 import type { ContentBridgeConfig } from '../config/loader.js'
 
 /**
@@ -264,7 +262,7 @@ export class TypeGeneratorUtils {
    */
   static generateInterface(schema: DocumentSchema): string {
     const fields = schema.fields
-      .map(field => {
+      .map((field: FieldSchema) => {
         const typeStr = this.fieldToTypeString(field)
         const optional = field.required ? '' : '?'
         const description = field.description ? `  /** ${field.description} */\n` : ''
@@ -284,7 +282,7 @@ export class TypeGeneratorUtils {
    */
   static generateZodSchema(schema: DocumentSchema): string {
     const fields = schema.fields
-      .map(field => {
+      .map((field: FieldSchema) => {
         const schemaStr = this.fieldToZodString(field)
         return `  ${field.name}: ${schemaStr}`
       })

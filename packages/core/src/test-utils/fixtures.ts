@@ -231,11 +231,11 @@ export const sampleRichTextContent: RichTextContent = sampleRichTextBlocks
 // ============================================================================
 
 export const sampleImage: MediaAsset = {
+  _id: 'image-asset-123',
   _type: 'image',
-  asset: {
-    _ref: 'image-asset-123',
-    _type: 'reference',
-  },
+  url: 'https://cdn.example.com/images/sample.jpg',
+  mimeType: 'image/jpeg',
+  filename: 'sample.jpg',
   alt: 'Sample image',
   hotspot: {
     x: 0.5,

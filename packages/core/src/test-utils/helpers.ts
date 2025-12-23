@@ -180,7 +180,7 @@ export function assertArrayUnique<T>(
   key?: keyof T
 ): void {
   const values = key ? array.map((item) => item[key]) : array
-  const uniqueValues = new Set(values)
+  const uniqueValues = new Set(values as unknown[])
   expect(uniqueValues.size).toBe(array.length)
 }
 

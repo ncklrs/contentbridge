@@ -6,7 +6,7 @@
 
 import { cosmiconfig } from 'cosmiconfig'
 import { z } from 'zod'
-import type { BaseAdapter } from '@contentbridge/core/adapters'
+import type { BaseAdapter } from '@contentbridge/core'
 
 // Configuration schema
 const configSchema = z.object({

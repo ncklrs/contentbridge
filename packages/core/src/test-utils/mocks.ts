@@ -245,7 +245,7 @@ export class MockQueryExecutor<TDoc extends BaseDocument = BaseDocument>
 
   async executeCount(config: QueryConfig): Promise<number> {
     this.lastConfig = config
-    return this.mockResults.total
+    return this.mockResults.total ?? 0
   }
 
   // Helper to set mock results
