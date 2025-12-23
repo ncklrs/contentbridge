@@ -4,8 +4,11 @@
 
 Tired of CMS vendor lock-in? ContentBridge provides a unified, type-safe interface for querying and mutating content across Sanity, Contentful, Payload, Strapi, and more. Switch CMSs without rewriting your application code.
 
+[![CI](https://github.com/ncklrs/contentbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/ncklrs/contentbridge/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@contentbridge/core.svg)](https://www.npmjs.com/package/@contentbridge/core)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ncklrs/contentbridge/blob/main/.github/CONTRIBUTING.md)
 
 ## Why ContentBridge?
 
@@ -218,14 +221,18 @@ await adapter.generateZodSchemas({ outDir: './schemas' })
 ├── types/         # Universal interfaces (document, query, richtext, media)
 ├── service/       # ContentService, QueryBuilder, MutationBuilder
 ├── adapters/      # BaseAdapter abstract class
-├── cache/         # Cache strategies (planned)
-├── plugins/       # Plugin system (planned)
+├── cache/         # Cache strategies (Memory, Next.js)
+├── plugins/       # Plugin system with built-in plugins
 └── utils/         # Errors, logging
 
 @contentbridge/{sanity,payload,contentful,strapi}
 ├── *Adapter.ts          # BaseAdapter implementation
 ├── query/               # Query compiler (→ GROQ, REST params, etc.)
 └── richtext/            # Rich text converter
+
+@contentbridge/cli
+├── commands/      # init, typegen commands
+└── typegen/       # TypeScript type generator
 ```
 
 ## Comparison

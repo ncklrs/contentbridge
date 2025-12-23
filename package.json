@@ -5,7 +5,7 @@
   "description": "CMS-agnostic content abstraction layer for headless CMS platforms",
   "repository": {
     "type": "git",
-    "url": "https://github.com/contentbridge/contentbridge"
+    "url": "https://github.com/ncklrs/contentbridge"
   },
   "license": "MIT",
   "author": "ContentBridge Contributors",
