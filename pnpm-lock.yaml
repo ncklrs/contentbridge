@@ -180,9 +180,6 @@ importers:
 
   packages/cli:
     dependencies:
-      '@contentbridge/core':
-        specifier: workspace:*
-        version: link:../core
       chalk:
         specifier: ^5.3.0
         version: 5.6.2
@@ -202,6 +199,9 @@ importers:
         specifier: ^3.22.0
         version: 3.25.76
     devDependencies:
+      '@contentbridge/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: ^20.10.0
         version: 20.19.27
