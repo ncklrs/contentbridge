@@ -1,14 +1,22 @@
-# ContentBridge
+<p align="center">
+  <img src="./assets/logo.svg" alt="ContentBridge" width="400" />
+</p>
 
-**Universal content abstraction layer for headless CMS platforms.**
+<p align="center">
+  <strong>Universal content abstraction layer for headless CMS platforms.</strong>
+</p>
 
+<p align="center">
 Tired of CMS vendor lock-in? ContentBridge provides a unified, type-safe interface for querying and mutating content across Sanity, Contentful, Payload, Strapi, and more. Switch CMSs without rewriting your application code.
+</p>
 
-[![CI](https://github.com/ncklrs/contentbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/ncklrs/contentbridge/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@contentbridge/core.svg)](https://www.npmjs.com/package/@contentbridge/core)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ncklrs/contentbridge/blob/main/.github/CONTRIBUTING.md)
+<p align="center">
+  <a href="https://github.com/ncklrs/contentbridge/actions/workflows/ci.yml"><img src="https://github.com/ncklrs/contentbridge/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://www.npmjs.com/package/@contentbridge/core"><img src="https://img.shields.io/npm/v/@contentbridge/core.svg" alt="npm version"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.0+-blue.svg" alt="TypeScript"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/ncklrs/contentbridge/blob/main/.github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
+</p>
 
 ## Why ContentBridge?
 
@@ -263,17 +271,31 @@ pnpm test
 pnpm dev
 ```
 
+## Documentation
+
+| Guide | Description |
+|-------|-------------|
+| [Getting Started](./docs/getting-started.md) | Installation, setup, and basic usage |
+| [API Reference](./docs/api-reference.md) | Complete API documentation |
+| [Creating Adapters](./docs/guides/creating-adapters.md) | Build your own CMS adapter |
+| [Sanity Adapter](./docs/adapters/sanity.md) | Sanity-specific features |
+| [Contentful Adapter](./docs/adapters/contentful.md) | Contentful-specific features |
+| [Payload Adapter](./docs/adapters/payload.md) | Payload-specific features |
+| [Strapi Adapter](./docs/adapters/strapi.md) | Strapi-specific features |
+
 ## Contributing
 
-Contributions are welcome! Please read our contributing guidelines before submitting PRs.
+Contributions are welcome! Please read our [contributing guidelines](./.github/CONTRIBUTING.md) before submitting PRs.
 
 ### Adding a New Adapter
 
-1. Create a new package in `packages/`
-2. Extend `BaseAdapter` from `@contentbridge/core`
-3. Implement all abstract methods
-4. Add a query compiler for your CMS's query language
-5. Add a rich text converter (if applicable)
+Want to add support for another CMS? Check out our comprehensive [Creating Adapters Guide](./docs/guides/creating-adapters.md) which covers:
+
+- Setting up the package structure
+- Implementing query compilation
+- Rich text conversion patterns
+- Media handling
+- Testing strategies
 
 ## License
 
