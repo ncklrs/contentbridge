@@ -1,0 +1,57 @@
+{
+  "name": "@contentbridge/sanity",
+  "version": "0.1.0",
+  "description": "Sanity CMS adapter for ContentBridge - provides GROQ query compilation and Portable Text conversion",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./groq": {
+      "types": "./dist/groq/index.d.ts",
+      "import": "./dist/groq/index.js"
+    },
+    "./richtext": {
+      "types": "./dist/richtext/index.d.ts",
+      "import": "./dist/richtext/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@contentbridge/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@sanity/client": "^6.0.0",
+    "@sanity/image-url": "^1.0.0"
+  },
+  "devDependencies": {
+    "@sanity/client": "^6.0.0",
+    "@sanity/image-url": "^1.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.6.0"
+  },
+  "keywords": [
+    "sanity",
+    "cms",
+    "groq",
+    "portable-text",
+    "contentbridge",
+    "headless-cms"
+  ]
+}

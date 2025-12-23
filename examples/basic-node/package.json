@@ -1,0 +1,31 @@
+{
+  "name": "basic-node-example",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ContentBridge example - Basic Node.js usage demonstrating all CRUD operations",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "example:create": "tsx src/examples/create.ts",
+    "example:query": "tsx src/examples/query.ts",
+    "example:update": "tsx src/examples/update.ts",
+    "example:delete": "tsx src/examples/delete.ts",
+    "example:transaction": "tsx src/examples/transaction.ts"
+  },
+  "dependencies": {
+    "@contentbridge/core": "workspace:*",
+    "@contentbridge/sanity": "workspace:*",
+    "@contentbridge/contentful": "workspace:*",
+    "@sanity/client": "^6.22.5",
+    "contentful": "^11.10.1",
+    "dotenv": "^16.4.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@contentbridge/payload",
+  "version": "0.1.0",
+  "description": "Payload CMS adapter for ContentBridge - provides REST/Local API integration and Slate rich text conversion",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./query": {
+      "types": "./dist/query/index.d.ts",
+      "import": "./dist/query/index.js"
+    },
+    "./richtext": {
+      "types": "./dist/richtext/index.d.ts",
+      "import": "./dist/richtext/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@contentbridge/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "payload": "^2.0.0 || ^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "payload": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "payload": "^3.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.6.0"
+  },
+  "keywords": [
+    "payload",
+    "payload-cms",
+    "cms",
+    "slate",
+    "contentbridge",
+    "headless-cms",
+    "rest-api",
+    "local-api"
+  ]
+}
